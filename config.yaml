@@ -1,0 +1,79 @@
+serverPort: 3000
+
+endpoints:
+  - path: /api/users
+    method: GET
+    status: 200
+    latency: 100
+    response:
+      users:
+        - id: 1
+          name: Alice Johnson
+          email: alice@example.com
+        - id: 2
+          name: Bob Smith
+          email: bob@example.com
+      total: 2
+
+  - path: /api/users/:id
+    method: GET
+    status: 200
+    latency: 50
+    response:
+      id: 1
+      name: Alice Johnson
+      email: alice@example.com
+      role: admin
+
+  - path: /api/users
+    method: POST
+    status: 201
+    latency: 200
+    response:
+      id: 3
+      message: User created successfully
+      timestamp: 2026-02-06T00:00:00Z
+
+  - path: /api/products
+    method: GET
+    status: 200
+    latency: 150
+    errorRate: 10
+    errorStatus: 503
+    errorResponse:
+      error: Service temporarily unavailable
+      code: SERVICE_ERROR
+    response:
+      products:
+        - id: 101
+          name: Laptop
+          price: 999.99
+        - id: 102
+          name: Mouse
+          price: 29.99
+
+  - path: /api/health
+    method: GET
+    status: 200
+    latency: 0
+    response:
+      status: healthy
+      timestamp: 2026-02-06T00:00:00Z
+
+  - path: /api/slow-endpoint
+    method: GET
+    status: 200
+    latency: 3000
+    response:
+      message: This response was intentionally delayed
+
+  - path: /api/error-test
+    method: GET
+    status: 500
+    errorRate: 100
+    errorStatus: 500
+    errorResponse:
+      error: This endpoint always fails
+      code: INTENTIONAL_ERROR
+    response:
+      message: This should never be returned
