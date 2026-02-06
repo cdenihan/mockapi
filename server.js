@@ -2,7 +2,6 @@ import { createServer } from 'http';
 import { readFileSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
-import BlueprintExtractor from './blueprint.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -173,8 +172,7 @@ class MockServer {
   
   _loadBlueprint() {
     const fileContent = readFileSync(this.blueprintPath, 'utf8');
-    const extractor = new BlueprintExtractor();
-    const blueprint = extractor.extractFrom(fileContent);
+    const blueprint = Bun.YAML.parse(fileContent);
     
     this.listeningPort = blueprint.serverPort || 3000;
     

@@ -12,7 +12,7 @@ A configurable mock server for API development and testing. Define responses in 
 - **Dynamic Path Parameters**: Support for path parameters like `/api/users/:id`
 - **Custom Status Codes**: Return any HTTP status code for your endpoints
 - **Custom Headers**: Configure response headers for each endpoint
-- **Zero Dependencies**: No external npm packages required (uses built-in Node.js/Bun modules only)
+- **Zero Dependencies**: Uses only Bun's built-in modules (including `Bun.YAML.parse()` for config parsing)
 - **Bun Runtime**: Optimized for Bun with fast startup and execution
 
 ## Installation
