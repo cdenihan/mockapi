@@ -2,6 +2,8 @@
 
 A configurable mock server for API development and testing. Define responses in YAML, simulate latency and errors.
 
+> **⚠️ AI-Generated Code**: This project was entirely written using GitHub Copilot AI assistance. The codebase was generated through AI-powered development.
+
 ## Features
 
 - **YAML Configuration**: Define API endpoints and responses in simple YAML files
@@ -10,11 +12,17 @@ A configurable mock server for API development and testing. Define responses in 
 - **Dynamic Path Parameters**: Support for path parameters like `/api/users/:id`
 - **Custom Status Codes**: Return any HTTP status code for your endpoints
 - **Custom Headers**: Configure response headers for each endpoint
+- **Zero Dependencies**: No external npm packages required (uses built-in Node.js/Bun modules only)
+- **Bun Runtime**: Optimized for Bun with fast startup and execution
 
 ## Installation
 
+No installation required! This project has zero dependencies.
+
+If you don't have Bun installed:
+
 ```bash
-npm install
+curl -fsSL https://bun.sh/install | bash
 ```
 
 ## Usage
@@ -22,13 +30,19 @@ npm install
 ### Start the server with default configuration
 
 ```bash
-npm start
+bun run server.js
+```
+
+Or use the npm script:
+
+```bash
+bun start
 ```
 
 ### Start with a custom configuration file
 
 ```bash
-node server.js path/to/your/config.yaml
+bun run server.js path/to/your/config.yaml
 ```
 
 ## Configuration Format
@@ -86,7 +100,13 @@ endpoints:
 Run the test suite:
 
 ```bash
-npm test
+bun test
+```
+
+Or:
+
+```bash
+bun run test.js
 ```
 
 Note: The server must be running before executing tests.
@@ -133,4 +153,6 @@ Use error rates to randomly trigger failures:
 
 ## License
 
-ISC
+MIT License - See LICENSE file for details.
+
+This project was created entirely with AI assistance using GitHub Copilot.

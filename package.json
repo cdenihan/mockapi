@@ -1,26 +1,30 @@
 {
   "name": "mockapi",
   "version": "1.0.0",
-  "description": "A configurable mock server for API development and testing",
+  "description": "A configurable mock server for API development and testing. Written with AI assistance from GitHub Copilot.",
   "main": "server.js",
+  "type": "module",
   "scripts": {
-    "start": "node server.js",
-    "start:custom": "node server.js",
-    "test": "node test.js"
+    "start": "bun run server.js",
+    "start:custom": "bun run server.js",
+    "test": "bun run test.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cdenihan/mockapi.git"
   },
-  "keywords": [],
+  "keywords": [
+    "mock",
+    "api",
+    "server",
+    "testing",
+    "development",
+    "bun"
+  ],
   "author": "",
-  "license": "ISC",
-  "type": "commonjs",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/cdenihan/mockapi/issues"
   },
-  "homepage": "https://github.com/cdenihan/mockapi#readme",
-  "dependencies": {
-    "js-yaml": "^4.1.1"
-  }
+  "homepage": "https://github.com/cdenihan/mockapi#readme"
 }

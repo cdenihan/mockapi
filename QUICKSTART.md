@@ -2,14 +2,18 @@
 
 ## Installation
 
+No npm packages needed! Zero dependencies.
+
+Install Bun if you haven't already:
+
 ```bash
-npm install
+curl -fsSL https://bun.sh/install | bash
 ```
 
 ## Start the Server
 
 ```bash
-npm start
+bun run server.js
 ```
 
 The server will start on port 3000 by default.
@@ -38,7 +42,7 @@ curl http://localhost:3000/api/products
 In a separate terminal (with server running):
 
 ```bash
-npm test
+bun run test.js
 ```
 
 ## Custom Configuration
@@ -46,7 +50,7 @@ npm test
 Create your own YAML file:
 
 ```bash
-node server.js my-config.yaml
+bun run server.js my-config.yaml
 ```
 
 See `config.example.yaml` for more configuration examples.
