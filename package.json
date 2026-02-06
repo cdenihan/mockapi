@@ -1,0 +1,27 @@
+{
+  "name": "mockapi",
+  "version": "1.0.0",
+  "description": "A configurable mock server for API development and testing",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "start:custom": "node server.js",
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cdenihan/mockapi.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/cdenihan/mockapi/issues"
+  },
+  "homepage": "https://github.com/cdenihan/mockapi#readme",
+  "dependencies": {
+    "express": "^5.2.1",
+    "js-yaml": "^4.1.1"
+  }
+}
